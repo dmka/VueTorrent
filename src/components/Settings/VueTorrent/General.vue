@@ -90,6 +90,7 @@ const paginationSizeMessages = computed(() => (vueTorrentStore.paginationSize > 
 const resetSettings = () => {
   localStorage.clear()
   sessionStorage.clear()
+  window.localStorage.setItem('vuetorrent_webuiSettings', JSON.stringify(getDefaultSettings()))
   location.reload()
 }
 
@@ -144,6 +145,980 @@ function openDateFormatHelp() {
 function openDurationFormatHelp() {
   openLink('https://day.js.org/docs/en/durations/format#list-of-all-available-formats')
 }
+
+function openBackendHelp() {
+  openLink('https://github.com/VueTorrent/vuetorrent-backend/wiki/Installation')
+}
+
+function getDefaultSettings() {
+  return {
+    "backendUrl": "",
+    "theme": {
+      "mode": "dark",
+      "light": "light-legacy",
+      "dark": "dark-legacy"
+    },
+    "dateFormat": "YYYY-MM-DD HH:mm:ss",
+    "durationFormat": "H[h] m[m] s[s]",
+    "deleteWithFiles": false,
+    "fileContentInterval": 5000,
+    "isDrawerRight": true,
+    "hideChipIfUnset": false,
+    "enableRatioColors": false,
+    "enableHashColors": true,
+    "isShutdownButtonVisible": false,
+    "language": "en",
+    "paginationSize": 15,
+    "refreshInterval": 2000,
+    "showAlltimeStat": false,
+    "showCurrentSpeed": true,
+    "showFreeSpace": true,
+    "showSessionStat": false,
+    "showSpeedGraph": true,
+    "showSpeedInTitle": false,
+    "uiTitleType": 0,
+    "uiTitleCustom": "",
+    "paginationPosition": 3,
+    "useBinarySize": false,
+    "useBitSpeed": false,
+    "useIdForRssLinks": false,
+    "hideColoredChip": true,
+    "_busyProperties": {
+      "added_on": {
+        "active": false,
+        "order": 16
+      },
+      "amount_left": {
+        "active": false,
+        "order": 20
+      },
+      "availability": {
+        "active": false,
+        "order": 17
+      },
+      "avg_download_speed": {
+        "active": false,
+        "order": 40
+      },
+      "avg_upload_speed": {
+        "active": false,
+        "order": 41
+      },
+      "basename_content_path": {
+        "active": false,
+        "order": 43
+      },
+      "basename_download_path": {
+        "active": false,
+        "order": 44
+      },
+      "basename_save_path": {
+        "active": false,
+        "order": 45
+      },
+      "category": {
+        "active": false,
+        "order": 14
+      },
+      "completed_on": {
+        "active": false,
+        "order": 19
+      },
+      "content_path": {
+        "active": false,
+        "order": 21
+      },
+      "download_limit": {
+        "active": false,
+        "order": 23
+      },
+      "download_path": {
+        "active": false,
+        "order": 24
+      },
+      "download_speed": {
+        "active": true,
+        "order": 3
+      },
+      "downloaded": {
+        "active": false,
+        "order": 5
+      },
+      "downloaded_session": {
+        "active": false,
+        "order": 22
+      },
+      "eta": {
+        "active": true,
+        "order": 8
+      },
+      "global_speed": {
+        "active": false,
+        "order": 34
+      },
+      "global_volume": {
+        "active": false,
+        "order": 35
+      },
+      "hash": {
+        "active": false,
+        "order": 25
+      },
+      "inactive_seeding_time_limit": {
+        "active": false,
+        "order": 42
+      },
+      "infohash_v1": {
+        "active": false,
+        "order": 26
+      },
+      "infohash_v2": {
+        "active": false,
+        "order": 27
+      },
+      "last_activity": {
+        "active": false,
+        "order": 18
+      },
+      "peers": {
+        "active": true,
+        "order": 9
+      },
+      "priority": {
+        "active": false,
+        "order": 36
+      },
+      "progress": {
+        "active": true,
+        "order": 2
+      },
+      "ratio": {
+        "active": true,
+        "order": 11
+      },
+      "ratio_limit": {
+        "active": false,
+        "order": 37
+      },
+      "save_path": {
+        "active": false,
+        "order": 6
+      },
+      "seeding_time": {
+        "active": false,
+        "order": 38
+      },
+      "seeding_time_limit": {
+        "active": false,
+        "order": 39
+      },
+      "seeds": {
+        "active": true,
+        "order": 10
+      },
+      "seen_complete": {
+        "active": false,
+        "order": 28
+      },
+      "size": {
+        "active": true,
+        "order": 1
+      },
+      "state": {
+        "active": true,
+        "order": 12
+      },
+      "tags": {
+        "active": false,
+        "order": 15
+      },
+      "time_active": {
+        "active": false,
+        "order": 29
+      },
+      "total_size": {
+        "active": false,
+        "order": 30
+      },
+      "tracker": {
+        "active": false,
+        "order": 13
+      },
+      "trackers_count": {
+        "active": false,
+        "order": 31
+      },
+      "truncated_hash": {
+        "active": false,
+        "order": 46
+      },
+      "upload_limit": {
+        "active": false,
+        "order": 33
+      },
+      "upload_speed": {
+        "active": true,
+        "order": 4
+      },
+      "uploaded": {
+        "active": false,
+        "order": 7
+      },
+      "uploaded_session": {
+        "active": false,
+        "order": 32
+      }
+    },
+    "_doneProperties": {
+      "added_on": {
+        "active": false,
+        "order": 16
+      },
+      "amount_left": {
+        "active": false,
+        "order": 20
+      },
+      "availability": {
+        "active": false,
+        "order": 17
+      },
+      "avg_download_speed": {
+        "active": false,
+        "order": 40
+      },
+      "avg_upload_speed": {
+        "active": false,
+        "order": 41
+      },
+      "basename_content_path": {
+        "active": false,
+        "order": 43
+      },
+      "basename_download_path": {
+        "active": false,
+        "order": 44
+      },
+      "basename_save_path": {
+        "active": false,
+        "order": 45
+      },
+      "category": {
+        "active": false,
+        "order": 14
+      },
+      "completed_on": {
+        "active": false,
+        "order": 19
+      },
+      "content_path": {
+        "active": false,
+        "order": 21
+      },
+      "download_limit": {
+        "active": false,
+        "order": 23
+      },
+      "download_path": {
+        "active": false,
+        "order": 24
+      },
+      "download_speed": {
+        "active": true,
+        "order": 3
+      },
+      "downloaded": {
+        "active": false,
+        "order": 5
+      },
+      "downloaded_session": {
+        "active": false,
+        "order": 22
+      },
+      "eta": {
+        "active": true,
+        "order": 8
+      },
+      "global_speed": {
+        "active": false,
+        "order": 34
+      },
+      "global_volume": {
+        "active": false,
+        "order": 35
+      },
+      "hash": {
+        "active": false,
+        "order": 25
+      },
+      "inactive_seeding_time_limit": {
+        "active": false,
+        "order": 42
+      },
+      "infohash_v1": {
+        "active": false,
+        "order": 26
+      },
+      "infohash_v2": {
+        "active": false,
+        "order": 27
+      },
+      "last_activity": {
+        "active": false,
+        "order": 18
+      },
+      "peers": {
+        "active": true,
+        "order": 9
+      },
+      "priority": {
+        "active": false,
+        "order": 36
+      },
+      "progress": {
+        "active": true,
+        "order": 2
+      },
+      "ratio": {
+        "active": true,
+        "order": 11
+      },
+      "ratio_limit": {
+        "active": false,
+        "order": 37
+      },
+      "save_path": {
+        "active": false,
+        "order": 6
+      },
+      "seeding_time": {
+        "active": true,
+        "order": 38
+      },
+      "seeding_time_limit": {
+        "active": false,
+        "order": 39
+      },
+      "seeds": {
+        "active": true,
+        "order": 10
+      },
+      "seen_complete": {
+        "active": false,
+        "order": 28
+      },
+      "size": {
+        "active": true,
+        "order": 1
+      },
+      "state": {
+        "active": true,
+        "order": 12
+      },
+      "tags": {
+        "active": false,
+        "order": 15
+      },
+      "time_active": {
+        "active": false,
+        "order": 29
+      },
+      "total_size": {
+        "active": false,
+        "order": 30
+      },
+      "tracker": {
+        "active": false,
+        "order": 13
+      },
+      "trackers_count": {
+        "active": false,
+        "order": 31
+      },
+      "truncated_hash": {
+        "active": false,
+        "order": 46
+      },
+      "upload_limit": {
+        "active": false,
+        "order": 33
+      },
+      "upload_speed": {
+        "active": true,
+        "order": 4
+      },
+      "uploaded": {
+        "active": false,
+        "order": 7
+      },
+      "uploaded_session": {
+        "active": false,
+        "order": 32
+      }
+    },
+    "_busyGridProperties": {
+      "added_on": {
+        "active": true,
+        "order": 16
+      },
+      "amount_left": {
+        "active": false,
+        "order": 20
+      },
+      "availability": {
+        "active": true,
+        "order": 17
+      },
+      "avg_download_speed": {
+        "active": false,
+        "order": 40
+      },
+      "avg_upload_speed": {
+        "active": false,
+        "order": 41
+      },
+      "basename_content_path": {
+        "active": false,
+        "order": 43
+      },
+      "basename_download_path": {
+        "active": false,
+        "order": 44
+      },
+      "basename_save_path": {
+        "active": false,
+        "order": 45
+      },
+      "category": {
+        "active": true,
+        "order": 14
+      },
+      "completed_on": {
+        "active": false,
+        "order": 19
+      },
+      "content_path": {
+        "active": false,
+        "order": 21
+      },
+      "download_limit": {
+        "active": false,
+        "order": 23
+      },
+      "download_path": {
+        "active": false,
+        "order": 24
+      },
+      "download_speed": {
+        "active": true,
+        "order": 3
+      },
+      "downloaded": {
+        "active": true,
+        "order": 5
+      },
+      "downloaded_session": {
+        "active": false,
+        "order": 22
+      },
+      "eta": {
+        "active": true,
+        "order": 8
+      },
+      "global_speed": {
+        "active": false,
+        "order": 34
+      },
+      "global_volume": {
+        "active": false,
+        "order": 35
+      },
+      "hash": {
+        "active": false,
+        "order": 25
+      },
+      "inactive_seeding_time_limit": {
+        "active": false,
+        "order": 42
+      },
+      "infohash_v1": {
+        "active": false,
+        "order": 26
+      },
+      "infohash_v2": {
+        "active": false,
+        "order": 27
+      },
+      "last_activity": {
+        "active": false,
+        "order": 18
+      },
+      "peers": {
+        "active": true,
+        "order": 9
+      },
+      "priority": {
+        "active": false,
+        "order": 36
+      },
+      "progress": {
+        "active": true,
+        "order": 2
+      },
+      "ratio": {
+        "active": true,
+        "order": 12
+      },
+      "ratio_limit": {
+        "active": false,
+        "order": 37
+      },
+      "save_path": {
+        "active": false,
+        "order": 6
+      },
+      "seeding_time": {
+        "active": false,
+        "order": 38
+      },
+      "seeding_time_limit": {
+        "active": false,
+        "order": 39
+      },
+      "seeds": {
+        "active": true,
+        "order": 10
+      },
+      "seen_complete": {
+        "active": false,
+        "order": 28
+      },
+      "size": {
+        "active": true,
+        "order": 1
+      },
+      "state": {
+        "active": true,
+        "order": 11
+      },
+      "tags": {
+        "active": true,
+        "order": 15
+      },
+      "time_active": {
+        "active": false,
+        "order": 29
+      },
+      "total_size": {
+        "active": false,
+        "order": 30
+      },
+      "tracker": {
+        "active": false,
+        "order": 13
+      },
+      "trackers_count": {
+        "active": false,
+        "order": 31
+      },
+      "truncated_hash": {
+        "active": false,
+        "order": 46
+      },
+      "upload_limit": {
+        "active": false,
+        "order": 33
+      },
+      "upload_speed": {
+        "active": true,
+        "order": 4
+      },
+      "uploaded": {
+        "active": true,
+        "order": 7
+      },
+      "uploaded_session": {
+        "active": false,
+        "order": 32
+      }
+    },
+    "_doneGridProperties": {
+      "added_on": {
+        "active": true,
+        "order": 16
+      },
+      "amount_left": {
+        "active": false,
+        "order": 20
+      },
+      "availability": {
+        "active": true,
+        "order": 17
+      },
+      "avg_download_speed": {
+        "active": false,
+        "order": 40
+      },
+      "avg_upload_speed": {
+        "active": false,
+        "order": 41
+      },
+      "basename_content_path": {
+        "active": false,
+        "order": 43
+      },
+      "basename_download_path": {
+        "active": false,
+        "order": 44
+      },
+      "basename_save_path": {
+        "active": false,
+        "order": 45
+      },
+      "category": {
+        "active": true,
+        "order": 14
+      },
+      "completed_on": {
+        "active": false,
+        "order": 19
+      },
+      "content_path": {
+        "active": false,
+        "order": 21
+      },
+      "download_limit": {
+        "active": false,
+        "order": 23
+      },
+      "download_path": {
+        "active": false,
+        "order": 24
+      },
+      "download_speed": {
+        "active": true,
+        "order": 3
+      },
+      "downloaded": {
+        "active": true,
+        "order": 5
+      },
+      "downloaded_session": {
+        "active": false,
+        "order": 22
+      },
+      "eta": {
+        "active": true,
+        "order": 8
+      },
+      "global_speed": {
+        "active": false,
+        "order": 34
+      },
+      "global_volume": {
+        "active": false,
+        "order": 35
+      },
+      "hash": {
+        "active": false,
+        "order": 25
+      },
+      "inactive_seeding_time_limit": {
+        "active": false,
+        "order": 42
+      },
+      "infohash_v1": {
+        "active": false,
+        "order": 26
+      },
+      "infohash_v2": {
+        "active": false,
+        "order": 27
+      },
+      "last_activity": {
+        "active": false,
+        "order": 18
+      },
+      "peers": {
+        "active": true,
+        "order": 9
+      },
+      "priority": {
+        "active": false,
+        "order": 36
+      },
+      "progress": {
+        "active": true,
+        "order": 2
+      },
+      "ratio": {
+        "active": true,
+        "order": 12
+      },
+      "ratio_limit": {
+        "active": false,
+        "order": 37
+      },
+      "save_path": {
+        "active": false,
+        "order": 6
+      },
+      "seeding_time": {
+        "active": false,
+        "order": 38
+      },
+      "seeding_time_limit": {
+        "active": false,
+        "order": 39
+      },
+      "seeds": {
+        "active": true,
+        "order": 10
+      },
+      "seen_complete": {
+        "active": false,
+        "order": 28
+      },
+      "size": {
+        "active": true,
+        "order": 1
+      },
+      "state": {
+        "active": true,
+        "order": 11
+      },
+      "tags": {
+        "active": true,
+        "order": 15
+      },
+      "time_active": {
+        "active": false,
+        "order": 29
+      },
+      "total_size": {
+        "active": false,
+        "order": 30
+      },
+      "tracker": {
+        "active": false,
+        "order": 13
+      },
+      "trackers_count": {
+        "active": false,
+        "order": 31
+      },
+      "truncated_hash": {
+        "active": false,
+        "order": 46
+      },
+      "upload_limit": {
+        "active": false,
+        "order": 33
+      },
+      "upload_speed": {
+        "active": true,
+        "order": 4
+      },
+      "uploaded": {
+        "active": true,
+        "order": 7
+      },
+      "uploaded_session": {
+        "active": false,
+        "order": 32
+      }
+    },
+    "_tableProperties": {
+      "added_on": {
+        "active": true,
+        "order": 16
+      },
+      "amount_left": {
+        "active": false,
+        "order": 20
+      },
+      "availability": {
+        "active": false,
+        "order": 17
+      },
+      "avg_download_speed": {
+        "active": false,
+        "order": 40
+      },
+      "avg_upload_speed": {
+        "active": false,
+        "order": 41
+      },
+      "basename_content_path": {
+        "active": false,
+        "order": 43
+      },
+      "basename_download_path": {
+        "active": false,
+        "order": 44
+      },
+      "basename_save_path": {
+        "active": false,
+        "order": 45
+      },
+      "category": {
+        "active": false,
+        "order": 14
+      },
+      "completed_on": {
+        "active": false,
+        "order": 19
+      },
+      "content_path": {
+        "active": false,
+        "order": 21
+      },
+      "download_limit": {
+        "active": false,
+        "order": 23
+      },
+      "download_path": {
+        "active": false,
+        "order": 24
+      },
+      "download_speed": {
+        "active": true,
+        "order": 3
+      },
+      "downloaded": {
+        "active": true,
+        "order": 5
+      },
+      "downloaded_session": {
+        "active": false,
+        "order": 22
+      },
+      "eta": {
+        "active": true,
+        "order": 8
+      },
+      "global_speed": {
+        "active": false,
+        "order": 34
+      },
+      "global_volume": {
+        "active": false,
+        "order": 35
+      },
+      "hash": {
+        "active": false,
+        "order": 25
+      },
+      "inactive_seeding_time_limit": {
+        "active": false,
+        "order": 42
+      },
+      "infohash_v1": {
+        "active": false,
+        "order": 26
+      },
+      "infohash_v2": {
+        "active": false,
+        "order": 27
+      },
+      "last_activity": {
+        "active": false,
+        "order": 18
+      },
+      "peers": {
+        "active": true,
+        "order": 9
+      },
+      "priority": {
+        "active": false,
+        "order": 36
+      },
+      "progress": {
+        "active": true,
+        "order": 2
+      },
+      "ratio": {
+        "active": true,
+        "order": 12
+      },
+      "ratio_limit": {
+        "active": false,
+        "order": 37
+      },
+      "save_path": {
+        "active": false,
+        "order": 6
+      },
+      "seeding_time": {
+        "active": false,
+        "order": 38
+      },
+      "seeding_time_limit": {
+        "active": false,
+        "order": 39
+      },
+      "seeds": {
+        "active": true,
+        "order": 10
+      },
+      "seen_complete": {
+        "active": false,
+        "order": 28
+      },
+      "size": {
+        "active": true,
+        "order": 1
+      },
+      "state": {
+        "active": true,
+        "order": 11
+      },
+      "tags": {
+        "active": false,
+        "order": 15
+      },
+      "time_active": {
+        "active": false,
+        "order": 29
+      },
+      "total_size": {
+        "active": false,
+        "order": 30
+      },
+      "tracker": {
+        "active": false,
+        "order": 13
+      },
+      "trackers_count": {
+        "active": false,
+        "order": 31
+      },
+      "truncated_hash": {
+        "active": false,
+        "order": 46
+      },
+      "upload_limit": {
+        "active": false,
+        "order": 33
+      },
+      "upload_speed": {
+        "active": true,
+        "order": 4
+      },
+      "uploaded": {
+        "active": true,
+        "order": 7
+      },
+      "uploaded_session": {
+        "active": false,
+        "order": 32
+      }
+    },
+    "displayGraphLimits": false,
+    "useEmojiState": false,
+    "fetchExternalIpInfo": false
+  }
+}
+
 </script>
 
 <template>
@@ -153,59 +1128,75 @@ function openDurationFormatHelp() {
     <v-list-item>
       <v-row>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.showCurrentSpeed" hide-details density="compact" :label="t('settings.vuetorrent.general.showCurrentSpeed')" />
+          <v-checkbox v-model="vueTorrentStore.showCurrentSpeed" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.showCurrentSpeed')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.showSpeedGraph" hide-details density="compact" :label="t('settings.vuetorrent.general.showSpeedGraph')" />
-        </v-col>
-
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.showAlltimeStat" hide-details density="compact" :label="t('settings.vuetorrent.general.showAlltimeStat')" />
-        </v-col>
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.showSessionStat" hide-details density="compact" :label="t('settings.vuetorrent.general.showSessionStat')" />
+          <v-checkbox v-model="vueTorrentStore.showSpeedGraph" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.showSpeedGraph')" />
         </v-col>
 
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.showFreeSpace" hide-details density="compact" :label="t('settings.vuetorrent.general.showFreeSpace')" />
+          <v-checkbox v-model="vueTorrentStore.showAlltimeStat" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.showAlltimeStat')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.isDrawerRight" hide-details density="compact" :label="t('settings.vuetorrent.general.isDrawerRight')" />
-        </v-col>
-
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.enableRatioColors" hide-details density="compact" :label="t('settings.vuetorrent.general.enableRatioColors')" />
-        </v-col>
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.enableHashColors" hide-details density="compact" :label="t('settings.vuetorrent.general.enableHashColors')" />
+          <v-checkbox v-model="vueTorrentStore.showSessionStat" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.showSessionStat')" />
         </v-col>
 
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.hideChipIfUnset" hide-details density="compact" :label="t('settings.vuetorrent.general.hideChipIfUnset')" />
+          <v-checkbox v-model="vueTorrentStore.showFreeSpace" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.showFreeSpace')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.hideColoredChip" hide-details density="compact" :label="t('settings.vuetorrent.general.hideColoredChip')" />
-        </v-col>
-
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.displayGraphLimits" hide-details density="compact" :label="t('settings.vuetorrent.general.displayGraphLimits')" />
-        </v-col>
-        <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.isShutdownButtonVisible" hide-details density="compact" :label="t('settings.vuetorrent.general.isShutdownButtonVisible')" />
+          <v-checkbox v-model="vueTorrentStore.isDrawerRight" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.isDrawerRight')" />
         </v-col>
 
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.useEmojiState" hide-details density="compact" :label="t('settings.vuetorrent.general.useEmojiState')" />
+          <v-checkbox v-model="vueTorrentStore.enableRatioColors" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.enableRatioColors')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.fetchExternalIpInfo" hide-details density="compact" :label="t('settings.vuetorrent.general.fetchExternalIpInfo')" />
+          <v-checkbox v-model="vueTorrentStore.enableHashColors" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.enableHashColors')" />
         </v-col>
 
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.useBinarySize" hide-details density="compact" :label="t('settings.vuetorrent.general.useBinarySize')" />
+          <v-checkbox v-model="vueTorrentStore.hideChipIfUnset" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.hideChipIfUnset')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <v-checkbox v-model="vueTorrentStore.useBitSpeed" hide-details density="compact" :label="t('settings.vuetorrent.general.useBitSpeed')" />
+          <v-checkbox v-model="vueTorrentStore.hideColoredChip" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.hideColoredChip')" />
+        </v-col>
+
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.displayGraphLimits" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.displayGraphLimits')" />
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.isShutdownButtonVisible" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.isShutdownButtonVisible')" />
+        </v-col>
+
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.useEmojiState" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.useEmojiState')" />
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.fetchExternalIpInfo" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.fetchExternalIpInfo')" />
+        </v-col>
+
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.useBinarySize" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.useBinarySize')" />
+        </v-col>
+        <v-col cols="12" sm="6">
+          <v-checkbox v-model="vueTorrentStore.useBitSpeed" hide-details density="compact"
+            :label="t('settings.vuetorrent.general.useBitSpeed')" />
         </v-col>
       </v-row>
     </v-list-item>
@@ -213,80 +1204,73 @@ function openDurationFormatHelp() {
     <v-list-item class="mt-3">
       <v-row>
         <v-col cols="12" md="4">
-          <v-text-field v-model.number="vueTorrentStore.refreshInterval" type="number" hide-details suffix="ms" :label="t('settings.vuetorrent.general.refreshInterval')" />
+          <v-text-field v-model.number="vueTorrentStore.refreshInterval" type="number" hide-details suffix="ms"
+            :label="t('settings.vuetorrent.general.refreshInterval')" />
         </v-col>
         <v-col cols="12" md="4">
-          <v-text-field v-model.number="vueTorrentStore.fileContentInterval" type="number" hide-details suffix="ms" :label="t('settings.vuetorrent.general.fileContentInterval')" />
+          <v-text-field v-model.number="vueTorrentStore.fileContentInterval" type="number" hide-details suffix="ms"
+            :label="t('settings.vuetorrent.general.fileContentInterval')" />
         </v-col>
         <v-col cols="12" md="4">
-          <v-text-field v-model.number="historyStore.historySize" type="number" hide-details :label="t('settings.vuetorrent.general.historySize')" />
+          <v-text-field v-model.number="historyStore.historySize" type="number" hide-details
+            :label="t('settings.vuetorrent.general.historySize')" />
         </v-col>
 
         <v-col cols="12" md="6">
-          <v-select v-model="vueTorrentStore.language" flat hide-details :items="LOCALES" :label="t('settings.vuetorrent.general.language')" />
+          <v-select v-model="vueTorrentStore.language" flat hide-details :items="LOCALES"
+            :label="t('settings.vuetorrent.general.language')" />
         </v-col>
         <v-col cols="12" md="6">
-          <v-select v-model="filterType" flat hide-details :items="filterInclusionOptions" :label="t('settings.vuetorrent.general.filterType')" />
+          <v-select v-model="filterType" flat hide-details :items="filterInclusionOptions"
+            :label="t('settings.vuetorrent.general.filterType')" />
         </v-col>
         <v-col cols="12" md="6">
-          <v-combobox
-            v-model="paginationSize"
-            :messages="paginationSizeMessages"
-            flat
-            hide-details
-            :items="paginationSizes"
-            :return-object="false"
+          <v-combobox v-model="paginationSize" :messages="paginationSizeMessages" flat hide-details
+            :items="paginationSizes" :return-object="false"
             :label="t('settings.vuetorrent.general.paginationSize.label')" />
         </v-col>
         <v-col cols="12" md="6">
-          <v-select
-            v-model="vueTorrentStore.paginationPosition"
-            flat
-            hide-details
-            :items="paginationBarOptions"
+          <v-select v-model="vueTorrentStore.paginationPosition" flat hide-details :items="paginationBarOptions"
             :label="t('settings.vuetorrent.general.paginationPosition.title')" />
         </v-col>
 
         <v-col cols="12" md="6">
-          <v-select v-model="vueTorrentStore.uiTitleType" flat hide-details :items="titleOptionsList" :label="t('settings.vuetorrent.general.vueTorrentTitle')" />
+          <v-select v-model="vueTorrentStore.uiTitleType" flat hide-details :items="titleOptionsList"
+            :label="t('settings.vuetorrent.general.vueTorrentTitle')" />
         </v-col>
         <v-col cols="12" md="6">
-          <v-text-field
-            :disabled="vueTorrentStore.uiTitleType !== TitleOptions.CUSTOM"
-            v-model="vueTorrentStore.uiTitleCustom"
-            hide-details
+          <v-text-field :disabled="vueTorrentStore.uiTitleType !== TitleOptions.CUSTOM"
+            v-model="vueTorrentStore.uiTitleCustom" hide-details
             :label="t('settings.vuetorrent.general.customTitle')" />
         </v-col>
 
         <v-col cols="12" md="6">
-          <v-select v-model="vueTorrentStore.theme.light" flat hide-details :items="lightVariants" :label="$t('settings.vuetorrent.general.lightVariants')" />
+          <v-select v-model="vueTorrentStore.theme.light" flat hide-details :items="lightVariants"
+            :label="$t('settings.vuetorrent.general.lightVariants')" />
         </v-col>
         <v-col cols="12" md="6">
-          <v-select v-model="vueTorrentStore.theme.dark" flat hide-details :items="darkVariants" :label="$t('settings.vuetorrent.general.darkVariants')" />
+          <v-select v-model="vueTorrentStore.theme.dark" flat hide-details :items="darkVariants"
+            :label="$t('settings.vuetorrent.general.darkVariants')" />
         </v-col>
       </v-row>
 
       <v-row>
         <v-col cols="12" md="3">
-          <v-text-field
-            v-model="vueTorrentStore.dateFormat"
-            flat
-            hide-details
-            :label="t('settings.vuetorrent.general.dateFormat')"
-            :placeholder="defaultDateFormat"
-            append-inner-icon="mdi-help-circle"
-            @click:appendInner="openDateFormatHelp" />
+          <v-text-field v-model="vueTorrentStore.dateFormat" flat hide-details
+            :label="t('settings.vuetorrent.general.dateFormat')" :placeholder="defaultDateFormat"
+            append-inner-icon="mdi-help-circle" @click:appendInner="openDateFormatHelp" />
         </v-col>
 
         <v-col cols="12" md="3">
-          <v-text-field
-            v-model="vueTorrentStore.durationFormat"
-            flat
-            hide-details
-            :label="t('settings.vuetorrent.general.durationFormat')"
-            :placeholder="defaultDurationFormat"
-            append-inner-icon="mdi-help-circle"
-            @click:appendInner="openDurationFormatHelp" />
+          <v-text-field v-model="vueTorrentStore.durationFormat" flat hide-details
+            :label="t('settings.vuetorrent.general.durationFormat')" :placeholder="defaultDurationFormat"
+            append-inner-icon="mdi-help-circle" @click:appendInner="openDurationFormatHelp" />
+        </v-col>
+
+        <v-col cols="12" md="6">
+          <v-text-field v-model="vueTorrentStore.backendUrl" :label="t('settings.vuetorrent.general.backendUrl')"
+            :hint="t('settings.vuetorrent.general.backendUrlHint')" placeholder="https://YOUR-HOST:PORT/"
+            append-inner-icon="mdi-help-circle" @click:appendInner="openBackendHelp" />
         </v-col>
       </v-row>
     </v-list-item>
@@ -297,14 +1281,18 @@ function openDurationFormatHelp() {
           <h3>
             {{ t('settings.vuetorrent.general.currentVersion') }}
             <span v-if="!vueTorrentVersion">undefined</span>
-            <a v-else-if="vueTorrentVersion === 'DEV'" target="_blank" href="https://github.com/VueTorrent/VueTorrent">{{ vueTorrentVersion }}</a>
-            <a v-else-if="!isStableVersion" target="_blank" href="https://github.com/VueTorrent/VueTorrent/releases/latest">{{ vueTorrentVersion }}</a>
-            <a v-else target="_blank" href="https://github.com/VueTorrent/VueTorrent/releases/tag/latest_nightly">{{ vueTorrentVersion }}</a>
+            <a v-else-if="vueTorrentVersion === 'DEV'" target="_blank"
+              href="https://github.com/VueTorrent/VueTorrent">{{ vueTorrentVersion }}</a>
+            <a v-else-if="!isStableVersion" target="_blank"
+              href="https://github.com/VueTorrent/VueTorrent/releases/latest">{{ vueTorrentVersion }}</a>
+            <a v-else target="_blank" href="https://github.com/VueTorrent/VueTorrent/releases/tag/latest_nightly">{{
+              vueTorrentVersion }}</a>
           </h3>
         </v-col>
 
         <v-col cols="6" class="d-flex align-center justify-center">
-          <v-btn color="primary" @click="registerMagnetHandler">{{ t('settings.vuetorrent.general.registerMagnet') }} </v-btn>
+          <v-btn color="primary" @click="registerMagnetHandler">{{ t('settings.vuetorrent.general.registerMagnet') }}
+          </v-btn>
         </v-col>
       </v-row>
     </v-list-item>
@@ -314,7 +1302,9 @@ function openDurationFormatHelp() {
         <v-col cols="12" sm="6" class="d-flex align-center justify-center">
           <h3>
             {{ t('settings.vuetorrent.general.qbittorrentVersion') }}
-            <a target="_blank" :href="`https://github.com/qbittorrent/qBittorrent/releases/tag/release-${appStore.version}`">{{ appStore.version }}</a>
+            <a target="_blank"
+              :href="`https://github.com/qbittorrent/qBittorrent/releases/tag/release-${appStore.version}`">{{
+                appStore.version }}</a>
           </h3>
         </v-col>
         <v-col cols="12" sm="6" class="d-flex align-center justify-center">

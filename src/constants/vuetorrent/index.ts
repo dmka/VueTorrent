@@ -1,6 +1,6 @@
 import comparatorMap from './Comparators'
 import type { PropertyData, PropertyMetadata, TorrentProperty } from './DashboardDefaults'
-import { propsData, propsMetadata } from './DashboardDefaults'
+import { propsData, propsMetadata, defaultWebuiSettings } from './DashboardDefaults'
 import { DashboardDisplayMode } from './DashboardDisplayMode'
 import { DashboardProperty } from './DashboardProperty'
 import { DashboardPropertyType } from './DashboardPropertyType'
@@ -41,5 +41,6 @@ export {
   stateVtToQbit,
   TrackerSpecialFilter,
   defaultDateFormat,
-  defaultDurationFormat
+  defaultDurationFormat,
+  defaultWebuiSettings
 }

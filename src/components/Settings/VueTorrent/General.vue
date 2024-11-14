@@ -90,7 +90,7 @@ const paginationSizeMessages = computed(() => (vueTorrentStore.paginationSize > 
 const resetSettings = () => {
   localStorage.clear()
   sessionStorage.clear()
-  window.localStorage.setItem('vuetorrent_webuiSettings', JSON.stringify(getDefaultSettings()))
+  window.localStorage.setItem('vuetorrent_webuiSettings', getDefaultSettings())
   location.reload()
 }
 

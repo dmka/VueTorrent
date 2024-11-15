@@ -95,7 +95,7 @@ function getNodeSubtitle(node: TreeNode) {
     :style="`padding-left: ${depth}px`"
     @click.stop="toggleInternalSelection($event, node)"
     @contextmenu="$emit('onRightClick', $event, node)">
-    <div class="d-flex">
+    <div class="d-flex prevent-select">
       <!-- Selection checkbox -->
       <div class="d-flex align-center" @click.stop="contentStore.toggleFileSelection(node)">
         <v-icon v-if="node.priority === FilePriority.MIXED" :color="getNodeColor(node)" icon="mdi-checkbox-intermediate-variant" />
@@ -150,5 +150,11 @@ function getNodeSubtitle(node: TreeNode) {
 [class*='v-theme--light-'] .selected {
   background-color: rgb(var(--v-theme-surface));
   filter: brightness(75%);
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 </style>

@@ -23,7 +23,7 @@ const dashboardStore = useDashboardStore()
 </script>
 
 <template>
-  <v-row id="torrentList">
+  <v-row id="torrentList" class="prevent-select">
     <v-col
       v-for="torrent in paginatedTorrents"
       cols="12"
@@ -58,5 +58,11 @@ const dashboardStore = useDashboardStore()
 <style scoped>
 #torrentList {
   background-color: unset;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 </style>

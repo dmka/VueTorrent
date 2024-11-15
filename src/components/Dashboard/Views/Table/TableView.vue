@@ -46,7 +46,7 @@ const getTorrentRowColorClass = (torrent: TorrentType) => [isTorrentSelected(tor
 </script>
 
 <template>
-  <v-table id="torrentList" class="pa-0" density="compact">
+  <v-table id="torrentList" class="pa-0 prevent-select" density="compact">
     <thead>
       <tr>
         <th class="px-1" />
@@ -117,5 +117,11 @@ const getTorrentRowColorClass = (torrent: TorrentType) => [isTorrentSelected(tor
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 </style>

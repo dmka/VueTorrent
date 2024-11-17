@@ -152,7 +152,7 @@ function getNodeSubtitle(node: TreeNode) {
   filter: brightness(75%);
 }
 
-.prevent-select {
+.prevent-select * {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */

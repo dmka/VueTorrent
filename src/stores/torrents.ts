@@ -115,7 +115,7 @@ export const useTorrentStore = defineStore(
       () => (isTrackerFilterActive.value = true)
     )
 
-    const sortCriterias = ref<{ value: keyof VtTorrent; reverse: boolean }[]>([{ value: 'added_on', reverse: true }])
+    const sortCriterias = ref<{ value: keyof VtTorrent; reverse: boolean }[]>([{ value: 'priority', reverse: false }])
 
     type matchFn = (t: VtTorrent) => boolean
     const matchStatus: matchFn = t => statusFilter.value.includes(t.state)

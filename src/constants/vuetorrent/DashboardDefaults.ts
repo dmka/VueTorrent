@@ -547,7 +547,7 @@ export const defaultWebuiSettings = {
       "order": 17
     },
     "avg_download_speed": {
-      "active": false,
+      "active": true,
       "order": 40
     },
     "avg_upload_speed": {
@@ -737,7 +737,7 @@ export const defaultWebuiSettings = {
       "order": 40
     },
     "avg_upload_speed": {
-      "active": false,
+      "active": true,
       "order": 41
     },
     "basename_content_path": {
@@ -919,7 +919,7 @@ export const defaultWebuiSettings = {
       "order": 17
     },
     "avg_download_speed": {
-      "active": false,
+      "active": true,
       "order": 40
     },
     "avg_upload_speed": {
@@ -1109,7 +1109,7 @@ export const defaultWebuiSettings = {
       "order": 40
     },
     "avg_upload_speed": {
-      "active": false,
+      "active": true,
       "order": 41
     },
     "basename_content_path": {
@@ -1291,7 +1291,7 @@ export const defaultWebuiSettings = {
       "order": 17
     },
     "avg_download_speed": {
-      "active": false,
+      "active": true,
       "order": 40
     },
     "avg_upload_speed": {
